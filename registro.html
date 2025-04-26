@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Conferencias - UAM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Registro de Estudiantes</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="registro.html">Registro</a>
+        </nav>
+    </header>
+
+    <main>
+        <form id="registroForm">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="correo">Correo institucional:</label>
+            <input type="email" id="correo" name="correo" required pattern=".+@uam\.edu\.ni">
+
+            <label for="carrera">Carrera:</label>
+            <select id="carrera" name="carrera" required>
+                <option value="">Seleccione su carrera</option>
+                <option value="Ingeniería en Sistemas">Ingeniería en Sistemas</option>
+                <option value="Ingeniería Industrial">Ingeniería Industrial</option>
+                <option value="Ingeniería Civil">Ingeniería Civil</option>
+                <option value="Arquitectura">Arquitectura</option>
+                <option value="Administración de Empresas">Administración de Empresas</option>
+                <option value="Negocios Internacionales">Negocios Internacionales</option>
+                <option value="Contabilidad y Finanzas">Contabilidad y Finanzas</option>
+                <option value="Economía Empresarial">Economía Empresarial</option>
+                <option value="Derecho">Derecho</option>
+                <option value="Diplomacia y Relaciones Públicas">Diplomacia y Relaciones Públicas</option>
+                <option value="Medicina">Medicina</option>
+                <option value="Odontología">Odontología</option>
+            </select>
+
+            <label>Conferencias a asistir:</label>
+            <div class="checkboxes">
+                <label><input type="checkbox" name="conferencias" value="GitHub"> Uso de GitHub</label>
+                <label><input type="checkbox" name="conferencias" value="Docker"> Introducción a Docker</label>
+                <label><input type="checkbox" name="conferencias" value="Linux"> Configuración de servidores Linux</label>
+            </div>
+
+            <button type="submit">Enviar Registro</button>
+        </form>
+
+        <div id="mensajeConfirmacion"></div>
+    </main>
+
+    <footer>
+        <p>© 2025 Universidad Americana (UAM)</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
